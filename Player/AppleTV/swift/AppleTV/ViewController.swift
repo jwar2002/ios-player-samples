@@ -73,6 +73,11 @@ class ViewController: UIViewController
         createSampleTabBarItemView()
         requestContentFromPlaybackService()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.playbackController?.pause()
+    }
 
     private func createSampleTabBarItemView() {
         

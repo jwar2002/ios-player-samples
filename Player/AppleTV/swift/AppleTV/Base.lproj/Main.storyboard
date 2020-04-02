@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="appleTV" orientation="landscape">
-        <adaptation id="light"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="15705" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="9EX-cw-j0Y">
+    <device id="appleTV" appearance="light"/>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,12 +20,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bzP-pg-mTD"/>
                     <connections>
                         <outlet property="videoContainerView" destination="8bC-Xf-vdC" id="kvn-R1-FP7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-192" y="61"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4oe-R0-2km">
+            <objects>
+                <viewController id="7YV-7b-OpJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hQo-34-42a"/>
+                        <viewControllerLayoutGuide type="bottom" id="kIa-Le-P5p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EF8-X3-S0M">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgu-LH-WNn">
+                                <rect key="frame" x="884" y="497" width="152" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="8Ti-Rd-ZWU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Hgu-LH-WNn" firstAttribute="centerY" secondItem="EF8-X3-S0M" secondAttribute="centerY" id="RbH-KK-haX"/>
+                            <constraint firstItem="Hgu-LH-WNn" firstAttribute="centerX" secondItem="EF8-X3-S0M" secondAttribute="centerX" id="ybF-3c-b9N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CRC-RT-lMq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IIZ-r4-0ir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1621" y="-1084"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SJq-6w-1Bg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9EX-cw-j0Y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qgb-Ew-rVz">
+                        <rect key="frame" x="0.0" y="60" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7YV-7b-OpJ" kind="relationship" relationship="rootViewController" id="Ypk-rk-GYV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RO9-yr-vHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2944" y="145"/>
         </scene>
     </scenes>
 </document>
